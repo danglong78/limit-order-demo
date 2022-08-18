@@ -1,0 +1,15 @@
+.app {
+  @apply bg-white text-base dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200 min-h-screen;
+}
+
+.app__admin-layout-position {
+  @apply relative overflow-hidden flex-grow;
+}
+
+.app__admin-layout-content {
+  @apply w-full p-6 mx-auto md:px-10 md:py-8;
+}
+
+.app__admin-layout-sidebar {
+  @apply flex-shrink-0 w-72 py-6 pt-[18px] shadow dark:shadow-gray-800 px-2 bg-neutral-100 dark:bg-neutral-800 mt-[6px];
+}

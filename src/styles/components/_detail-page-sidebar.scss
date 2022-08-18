@@ -1,0 +1,33 @@
+.detail-page-sidebar__price-wrapper {
+  @apply flex flex-col text-right absolute top-0 right-0 whitespace-nowrap;
+}
+
+.detail-page-sidebar__price {
+  @apply text-xl font-semibold;
+}
+
+.detail-page-sidebar__token {
+  @apply text-base font-normal text-neutral-500 dark:text-neutral-400;
+}
+
+.detail-page-sidebar__form {
+  @apply flex flex-col border border-neutral-400 dark:border-neutral-700 rounded-3xl;
+}
+
+.detail-page-sidebar__form-divider {
+  @apply w-full border-b border-neutral-200 dark:border-neutral-700;
+}
+
+.detail-page-sidebar__info {
+  @apply flex flex-col space-y-4;
+}
+.detail-page-sidebar__info-row {
+  @apply flex justify-between text-neutral-6000 dark:text-neutral-300;
+}
+
+.detail-page-sidebar__total {
+  @apply border-b border-neutral-400 dark:border-neutral-700;
+}
+.detail-page-sidebar__total-label {
+  @apply flex justify-between font-semibold;
+}

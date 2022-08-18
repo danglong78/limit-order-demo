@@ -1,0 +1,21 @@
+.progress-steps {
+  @apply grid justify-items-center auto-rows-auto;
+}
+
+.progress-steps__layout {
+  @apply flex flex-wrap items-center w-[calc(50%+20px)];
+}
+.progress-steps__content {
+  @apply w-[calc(100%-20px)] flex items-center;
+}
+.progress-steps__circle {
+  @apply rounded-full min-w-[24px] min-h-[24px] flex items-center justify-center leading-[8px] text-xs text-neutral-200 bg-neutral-6000 dark:bg-neutral-400 dark:text-neutral-900;
+}
+
+.progress-steps__circle--disabled {
+  @apply text-white bg-neutral-300 dark:bg-neutral-800 #{!important};
+}
+
+.progress-steps__connector {
+  @apply w-full h-[6px] bg-gradient-to-r from-neutral-6000 to-neutral-300 dark:to-neutral-800 dark:from-neutral-400;
+}

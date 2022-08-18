@@ -1,0 +1,12 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import './components/main.scss';
+@import './theme/main.scss';
+@import './pages/main.scss';
+@import './layouts/main.scss';
+
+@import './base.scss';
+
+@import './Home.module.scss';

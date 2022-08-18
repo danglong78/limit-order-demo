@@ -1,0 +1,23 @@
+{
+  "startSale": "Bắt đầu gọi vốn",
+  "cancelSale": "Huỷ gọi vốn",
+  "endSale": "Kết thúc gọi vốn",
+  "publishSale": "Công bố dự án",
+  "hideSale": "Ẩn dự án",
+  "deleteEstateProject": "Xoá dự án",
+  "editEstateProject": "Cập nhật dự án",
+  "createVoting": "Tạo phiên biểu quyết",
+  "estateManagement": "Quản lý dự án",
+  "createEstateProject": "Tạo dự án",
+  "estateProject": "Dự án bất động sản",
+  "saleAddress": "Địa chỉ dự án",
+  "createdAt": "Ngày tạo",
+  "action": "Thao tác",
+  "status": "Trạng thái",
+  "sweep": "Rút tiền đầu tư",
+  "sweepToAddress": "Địa chỉ ví rút tiền",
+  "errorBlankField": "Vui lòng điền vào trường này",
+  "errorSweptAddress": "Vui lòng điền địa chỉ ví hợp lệ",
+  "price": "Định giá",
+  "estateToken": "Địa chỉ token"
+}

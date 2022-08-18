@@ -1,0 +1,49 @@
+.swap-section__wrapper {
+  @apply flex flex-col;
+}
+
+.swap-section__layout {
+  @apply flex flex-shrink-0 px-6 py-0 md:px-10;
+}
+
+.swap-section__width {
+  @apply w-[328px];
+}
+.swap-section__decoration {
+  @apply rounded-3xl max-w-[436px] w-full z-[50] bg-neutral-100 dark:bg-neutral-800;
+}
+.swap-section__content-wrapper {
+  @apply relative p-4;
+}
+.swap-section__input-wrapper {
+  @apply grid auto-rows-auto gap-y-3;
+}
+.swap-section__switch {
+  @apply grid auto-rows-auto justify-items-center;
+}
+.swap-section__switch-wrapper {
+  @apply flex flex-wrap items-center justify-center w-full px-4 py-0;
+}
+.swap-section__switch-button {
+  @apply bg-neutral-300 hover:bg-primary-200;
+}
+.swap-section__info {
+  @apply grid px-4 py-0 auto-rows-auto gap-y-2;
+}
+
+.swap-section__swap {
+  @apply flex flex-col justify-center mt-4;
+}
+.swap-section__approve {
+  @apply flex items-center justify-between w-full p-0 gap-1;
+}
+
+.swap-section__progress {
+  @apply flex flex-col justify-start mt-4;
+}
+.swap-section__trade-price {
+  @apply h-[22px] w-[22px] rounded-[50%] p-[0.2rem] text-sm font-normal ml-[0.4rem] cursor-pointer flex justify-center items-center;
+}
+.swap-section__trade-price-wrap {
+  @apply flex items-center justify-center;
+}

@@ -1,0 +1,65 @@
+.modal {
+  @apply absolute overflow-y-hidden flex flex-col bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200 top-0 left-0 bottom-0 z-[1000] w-screen h-screen transition-all opacity-0 duration-300 -translate-x-10 ease-in-out shadow-lg;
+}
+
+.modal__loading {
+  @apply z-50 absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2;
+}
+
+.modal__header {
+  @apply relative flex justify-center items-center px-12 py-4 border-b border-neutral-300 dark:border-neutral-700 w-full min-h-[64px] h-16;
+}
+
+.modal__header-title {
+  @apply text-base md:text-xl leading-8 font-semibold truncate;
+}
+
+.modal__header-close-icon {
+  @apply absolute left-2 -translate-y-1/2 top-1/2;
+}
+
+.modal__body {
+  // TODO: padding bottom need to re-calculate when adding button to footer
+  @apply p-6 flex-grow  overflow-y-auto;
+}
+
+.modal__footer {
+  @apply p-6 border-t border-neutral-300 dark:border-neutral-700 bottom-0 left-0 w-full;
+}
+
+.modal--sidebar {
+  @apply w-4/5 h-screen rounded-none;
+}
+
+.modal__backdrop {
+  @apply absolute overflow-y-auto border-none backdrop-blur-sm bg-gray-900 bg-opacity-75 opacity-90 dark:bg-gray-800 dark:bg-opacity-75 dark:opacity-90 top-0 left-0 bottom-0 right-0 h-full w-full z-[999];
+}
+
+@screen md {
+  .modal {
+    @apply rounded-lg left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[640px] h-fit #{!important};
+  }
+
+  .modal--fullscreen {
+    @apply w-screen h-screen rounded-none #{!important};
+  }
+
+  .modal__header {
+    @apply relative rounded-t-lg flex justify-center;
+  }
+
+  .modal__header-close-icon {
+    @apply left-auto right-2;
+  }
+
+  .modal__body {
+    @apply py-6 max-h-[80vh] overflow-y-auto;
+  }
+  .modal__body--fullscreen {
+    @apply max-h-[calc(100vh-2.5rem)] py-0;
+  }
+
+  .modal__footer {
+    @apply static rounded-b-lg w-full;
+  }
+}

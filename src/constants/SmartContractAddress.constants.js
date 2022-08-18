@@ -1,0 +1,6 @@
+export const UsdtToken = '0x920CC48e71611aeC526fA9e7f02C4B05E1031d02';
+export const VndcToken = '0xdbD99eB0CcB021257A6138b2090Fe7FfbBf45E27';
+export const RNT = '0x4244AeBaCe472c0138C7f4843265A7a480310653';
+export const EstateFactory = '0x215a00cE4EB2DB76aB1d1B9979192AfFb4a9B4aa';
+export const TradingPool = '0xa3bB378F88618fd869d79bE2dA5B9CB830f446Ed';
+export const RNTPool = '0x87E9F98204f81A5c22EcC79c5766A6C7863bb559';

@@ -1,0 +1,13 @@
+{
+  "createVoting": "Create vote session",
+  "updateVoting": "Update vote session",
+  "price": "Price per estate token",
+  "buyerAddress": "Buyer wallet address",
+  "title": "Title",
+  "description": "Description",
+  "errorBlankField": "Please fill in this field",
+  "errorBuyerAddress": "Please fill in valid wallet address",
+  "errorPrice": "Please fill in valid price which is higher the current estate token price",
+  "searchAndSelectEstate": "Search and select estate project to create vote",
+  "takeProfitNote": "Note: Estate project will be taken profit at {{value}} {{unit}}"
+}

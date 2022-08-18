@@ -1,0 +1,13 @@
+{
+  "createVoting": "Tạo phiên biểu quyết",
+  "updateVoting": "Cập nhật phiên biểu quyết",
+  "price": "Giá trên mỗi token bất động sản",
+  "buyerAddress": "Địa chỉ ví người mua",
+  "title": "Tiêu đề",
+  "description": "Mô tả chi tiết",
+  "errorBlankField": "Vui lòng điền vào trường này",
+  "errorBuyerAddress": "Vui lòng điền địa chỉ ví hợp lệ",
+  "errorPrice": "Vui lòng điền mức giá cao hơn giá token bất động sản ở thời điểm hiện tại",
+  "searchAndSelectEstate": "Tìm kiếm và chọn bất động sản để tạo biểu quyết",
+  "takeProfitNote": "Note: Bất động sản sẽ được chốt lời với giá trị {{value}} {{unit}}"
+}

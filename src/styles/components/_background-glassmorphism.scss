@@ -1,0 +1,10 @@
+.background-glassmorphism {
+  @apply absolute inset-x-0 md:top-10 xl:top-40 min-h-0 pl-20 py-24 flex overflow-hidden z-0;
+}
+
+.background-glassmorphism__red-circle {
+  @apply block bg-[#ef233c] w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl opacity-10 lg:w-96 lg:h-96;
+}
+.background-glassmorphism__green-circle {
+  @apply block bg-[#04868b] w-72 h-72 -ml-20 mt-40 rounded-full mix-blend-multiply filter blur-3xl opacity-10 lg:w-96 lg:h-96 ;
+}

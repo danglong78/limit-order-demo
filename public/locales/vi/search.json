@@ -1,0 +1,12 @@
+{
+  "searchEstate": "Tìm kiếm bất động sản",
+  "statuses": "Trạng thái",
+  "statusesText": "Trạng thái của bất động sản này là",
+  "price": "Giá 1 token",
+  "clear": "Xoá",
+  "apply": "Áp dụng",
+  "cityFilter": "Lọc thành phố",
+  "select": "chọn",
+  "minPrice": "Giá tối thiểu",
+  "maxPrice": "Giá tối đa"
+}

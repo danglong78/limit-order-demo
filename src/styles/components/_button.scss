@@ -1,0 +1,43 @@
+.button {
+  @apply relative h-auto inline-flex items-center justify-center rounded-full transition-colors border border-transparent border-solid;
+}
+
+.button__loading {
+  @apply animate-spin -ml-1 mr-3 h-5 w-5;
+}
+
+.button--primary {
+  @apply bg-primary-200 hover:disabled:bg-primary-200 hover:bg-primary-300 text-neutral-900 transition-colors duration-500 disabled:opacity-60 focus:bg-primary-500;
+}
+
+.button--secondary {
+  @apply bg-secondary-200 hover:disabled:bg-secondary-200 hover:bg-secondary-300 text-neutral-900 transition-colors duration-500 disabled:opacity-60 focus:bg-secondary-400;
+}
+
+.button--third {
+  @apply text-neutral-6000 outline-neutral-6000 hover:outline-0 disabled:hover:outline-1 hover:text-neutral-200 hover:bg-neutral-6000 hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:disabled:text-neutral-6000 disabled:opacity-30 focus:text-neutral-200 focus:bg-neutral-700 transition-colors duration-500 outline outline-1 dark:text-neutral-400 hover:dark:text-neutral-900 dark:outline-neutral-400 dark:disabled:hover:text-neutral-400 dark:hover:bg-neutral-400 dark:focus:text-neutral-900 dark:focus:bg-neutral-500;
+}
+
+.button--fourth {
+  @apply font-normal bg-transparent outline outline-1 outline-neutral-200 dark:outline-neutral-700 disabled:text-neutral-300 dark:disabled:text-neutral-700 dark:focus:border-primary-700 focus:border-primary-300;
+}
+
+.button--circle {
+  @apply flex items-center justify-center rounded-full leading-none h-11 w-11;
+}
+
+.button--close {
+  @apply w-8 h-8 flex items-center justify-center rounded-full text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700;
+}
+
+.button--icon-raw {
+  @apply text-2xl md:text-3xl w-12 h-12 rounded-full text-neutral-500 dark:text-neutral-400 hover:bg-neutral-100 dark:hover:bg-neutral-800 focus:outline-none flex items-center justify-center transition-colors duration-500;
+}
+
+.button--clear {
+  @apply absolute z-10 w-5 h-5 lg:w-6 lg:h-6 text-sm bg-neutral-200 dark:bg-neutral-800 rounded-full flex items-center justify-center right-1 lg:right-3 top-1/2 transform -translate-y-1/2;
+}
+
+.button--submit {
+  @apply h-14 lg:h-16 w-full lg:w-16 rounded-full flex items-center justify-center focus:outline-none bg-primary-200 hover:disabled:bg-primary-200 hover:bg-primary-300 text-neutral-900 transition-colors duration-500 disabled:opacity-60 focus:bg-primary-500;
+}

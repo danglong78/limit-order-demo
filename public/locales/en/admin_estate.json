@@ -1,0 +1,23 @@
+{
+  "startSale": "Start capital call",
+  "cancelSale": "Cancel capital call",
+  "endSale": "End capital call",
+  "publishSale": "Publish estate project",
+  "hideSale": "Hide estate project",
+  "deleteEstateProject": "Delete estate project",
+  "editEstateProject": "Edit estate project",
+  "createVoting": "Create session vote",
+  "estateManagement": "Estate project management",
+  "createEstateProject": "Create estate project",
+  "estateProject": "Estate project",
+  "saleAddress": "Sale address",
+  "createdAt": "Created at",
+  "action": "Actions",
+  "status": "Status",
+  "sweep": "Sweep to wallet",
+  "sweepToAddress": "Sweep wallet address",
+  "errorBlankField": "Please fill in this field",
+  "errorSweptAddress": "Please fill in valid wallet address",
+  "price": "Valuation",
+  "estateToken": "Token address"
+}

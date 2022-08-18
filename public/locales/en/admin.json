@@ -1,0 +1,21 @@
+{
+  "sidebarMenu": {
+    "realEstate": "Real estate",
+    "manageEstateProject": "Estate project management",
+    "createEstateProject": "Estate project creation",
+    "voting": "Vote",
+    "manageVoting": "Vote session management",
+    "createVoting": "Vote session creation",
+    "acquisitionRequest": "Acquisition request",
+    "user": "User"
+  },
+  "priceCell": {
+    "initialCap": "Initial cap",
+    "marketCap": "Market cap",
+    "takeProfit": "Take profit"
+  },
+  "contentCell": {
+    "published": "Published",
+    "hidden": "Hidden"
+  }
+}

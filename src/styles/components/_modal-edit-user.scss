@@ -1,0 +1,11 @@
+.modal-edit-user {
+  @apply h-[60vh];
+}
+
+.modal-edit-user__checkbox {
+  @apply mt-8 relative;
+}
+
+.modal-edit-user__list-checkbox {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-2 mt-4 px-9;
+}

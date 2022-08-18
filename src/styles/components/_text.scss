@@ -1,0 +1,19 @@
+.text-heading1 {
+  @apply text-3xl md:text-4xl font-semibold;
+}
+
+.text-heading2 {
+  @apply text-2xl md:text-3xl font-semibold;
+}
+
+.text-heading3 {
+  @apply text-sm md:text-xl;
+}
+
+.text-sub-heading {
+  @apply block mt-2 text-neutral-500 dark:text-neutral-400 text-justify text-sm sm:text-base;
+}
+
+.text-sub-label--small {
+  @apply text-xs md:text-sm text-neutral-500 font-normal my-3;
+}

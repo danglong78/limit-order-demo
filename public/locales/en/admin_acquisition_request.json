@@ -1,0 +1,15 @@
+{
+  "acquisitionManagement": "Acquisition request management",
+  "estateProject": "Estate project",
+  "buyerInfo": "Buyer info",
+  "buyerAddress": "Buyer wallet address",
+  "kycImages": "KYC images",
+  "price": "Valuation",
+  "createdAt": "Created at",
+  "status": "Status",
+  "action": "Actions",
+  "description": "Note message",
+  "approveAcquisitionAndCreate": "Approve and create vote session",
+  "approveAcquisition": "Approve request",
+  "rejectAcquisition": "Reject request"
+}

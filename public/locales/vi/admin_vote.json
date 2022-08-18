@@ -1,0 +1,23 @@
+{
+  "votingManagement": "Quản lý biểu quyết",
+  "votingTitle": "Phiên biểu quyết",
+  "status": "Trạng thái",
+  "createdAt": "Ngày tạo",
+  "startedAt": "Ngày bắt đầu",
+  "endedAt": "Ngày kết thúc",
+  "buyerAddress": "Địa chỉ ví người mua",
+  "createVoting": "Tạo phiên biểu quyết",
+  "updateVoting": "Cập nhật phiên biểu quyết",
+  "approveVotingResult": "Chấp thuận kết quả",
+  "denyVotingResult": "Phủ nhận kết quả",
+  "deleteVoting": "Xoá phiên biểu quyết",
+  "startVoting": "Công bố phiên biểu quyết",
+  "endVoting": "Kết thúc phiên biểu quyết",
+  "action": "Thao tác",
+  "price": "Định giá",
+  "endedDate": "Ngày kết thúc",
+  "endedTime": "Thời gian kết thúc",
+  "selectEndedAt": "Chọn thời gian phiên biểu quyết kết thúc",
+  "errorBlankField": "Vui lòng điền vào trường này",
+  "deniedResultReason": "Lý do phủ nhận kết quả biểu quyết"
+}

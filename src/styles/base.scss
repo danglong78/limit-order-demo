@@ -1,0 +1,21 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply w-screen h-screen;
+}
+
+#__next {
+  @apply w-full h-full relative;
+}
+
+*:disabled {
+  @apply cursor-not-allowed;
+}
+
+a,
+textarea,
+input {
+  z-index: 0;
+}

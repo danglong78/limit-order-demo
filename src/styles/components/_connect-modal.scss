@@ -1,0 +1,17 @@
+.connect-modal {
+  @apply py-6 max-h-[453px] overflow-y-auto;
+}
+.connect-modal__list {
+  @apply grid grid-cols-2;
+}
+
+.connect-modal__card {
+  @apply flex flex-col items-center justify-center w-full h-auto py-4 ml-auto mr-auto hover:opacity-60;
+}
+
+.connect-modal__icon {
+  @apply self-center flex-shrink-0 mb-4 w-14;
+}
+.connect-modal__label {
+  @apply text-sm font-semibold;
+}

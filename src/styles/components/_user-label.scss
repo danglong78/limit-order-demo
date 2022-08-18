@@ -1,0 +1,22 @@
+.user-label {
+  @apply flex items-center h-full ml-1;
+}
+
+.user-label__content {
+  @apply inline-flex items-center bg-primary-50 rounded-2xl cursor-pointer h-8 pl-12 pr-2 relative hover:opacity-70 transition-opacity;
+}
+
+.user-label__content-view-mode {
+  @apply w-full hover:opacity-100 cursor-default;
+}
+
+.user-label__label {
+  @apply block text-neutral-700 font-semibold ml-2 mr-2 w-full;
+}
+
+.user-label__icon-wrapper {
+  @apply flex justify-center items-center -top-[8px] bg-primary-200 shadow-md rounded-full h-12 w-12 -left-1 z-30 absolute border-transparent text-neutral-900;
+}
+.user-label__icon-wrapper--not-on-top {
+  @apply border-solid border-4 border-transparent;
+}

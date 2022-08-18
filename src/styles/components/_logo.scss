@@ -1,0 +1,9 @@
+.logo {
+  @apply inline-block text-primary-6000 focus:ring-transparent focus:outline-hidden;
+}
+.logo__image {
+  @apply block relative  max-h-12 dark:hidden;
+}
+.logo__image--light {
+  @apply relative hidden m-0 max-h-12 dark:block;
+}
