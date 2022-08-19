@@ -4,9 +4,9 @@
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "Realnextate",
-    "short_name": "Realnextate",
-    "description": "Real Next Estate",
+    "name": "Demo",
+    "short_name": "Demo",
+    "description": "Limit order demo",
     "prefer_related_applications": true,
     "icons": [
         {

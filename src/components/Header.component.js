@@ -72,7 +72,6 @@ const Header = () => {
           <div className="header__right-inner">
             <div className="header__right-inner-content">
               {laptopScreen && <SwitchDarkMode />}
-              {laptopScreen && <SwitchLocale />}
               {laptopScreen && <UserMenu />}
               {mobileScreen && <UserWallet />}
             </div>

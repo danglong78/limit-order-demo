@@ -1,5 +1,5 @@
 {
-  "name": "realnextate-client",
+  "name": "limit-order-demo",
   "private": true,
   "scripts": {
     "dev": "next dev ",
@@ -24,6 +24,7 @@
     "@ethersproject/providers": "^5.5.2",
     "@ethersproject/strings": "^5.5.0",
     "@ethersproject/units": "^5.5.0",
+    "@gelatonetwork/limit-orders-lib": "^4.4.0",
     "@headlessui/react": "^1.4.3",
     "@heroicons/react": "^1.0.5",
     "@hookform/resolvers": "^2.8.8",

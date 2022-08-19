@@ -6,17 +6,14 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta name="application-name" content="Realnextate" />
+          <meta name="application-name" content="Demo Limit Order" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
             content="default"
           />
-          <meta name="apple-mobile-web-app-title" content="Realnextate" />
-          <meta
-            name="description"
-            content="The best tokenize real estate app"
-          />
+          <meta name="apple-mobile-web-app-title" content="Demo Limit Order" />
+          <meta name="description" content="The best limit order app" />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
 

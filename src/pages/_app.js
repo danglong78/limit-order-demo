@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 import { fetchStatusMiddleware } from 'hooks/useSWRContract';
 
 import { Web3ReactProvider } from '@web3-react/core';
-import { appWithTranslation } from 'next-i18next';
 import NextNProgress from 'nextjs-progressbar';
 
 import { getLibrary } from 'utils/web3React.util';
@@ -50,4 +49,4 @@ MyApp.propTypes = {
   pageProps: PropTypes.object,
 };
 
-export default appWithTranslation(MyApp);
+export default MyApp;
