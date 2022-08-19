@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo } from 'react';
 import useSWR from 'swr';
 import { useWeb3React } from '@web3-react/core';
 import { ArrowSmRightIcon } from '@heroicons/react/outline';
@@ -15,41 +15,27 @@ import { ButtonFourth } from './Button';
 
 const ListOrderTab = ({ handler }) => {
   const { account, library } = useWeb3React();
+  const signer = useMemo(() => {
+    return getSigner(library, account);
+  }, [account]);
   const { data } = useSWR(
     {
       userAddress: account,
-      signer: getSigner(library, account),
+      signer,
       handler,
     },
     async (params) => {
-      console.log(
-        '🚀 ~ file: ListOrderTab.component.js ~ line 26 ~ params',
-        params
-      );
       if (!params) return [];
       const [orders, error] = await withCatch(getListOrders(params));
-      console.log(
-        '🚀 ~ file: ListOrderTab.component.js ~ line 29 ~ error',
-        error
-      );
-      console.log(
-        '🚀 ~ file: ListOrderTab.component.js ~ line 29 ~ orders',
-        orders
-      );
       if (orders) {
         return orders;
       }
       if (error) {
-        toast.error(error);
         return [];
       }
       return [];
     },
     { refreshInterval: 10000 }
-  );
-  console.log(
-    '🚀 ~ file: ListOrderTab.component.js ~ line 19 ~ ListOrderTab ~ data',
-    data
   );
   const { excAsyncFunc: excTrade, loading } = useAsyncWithLoading({
     asyncFunc: async (id) => {
@@ -81,19 +67,24 @@ const ListOrderTab = ({ handler }) => {
         data && (
           <>
             {data?.map((item, index) => (
-              <div className="bg-white p-3 border-2 border-primary-100 rounded-xl">
+              <div
+                className="bg-white p-3 border-2 border-primary-100 rounded-xl"
+                key={index}
+              >
                 <div className="flex justify-between items-center ">
                   <div className="flex items-center gap-1">
-                    <span className="font-bold text-xl">BNB</span>
+                    <span className="font-bold text-xl">{item.inputToken}</span>
                     <ArrowSmRightIcon className="w-6 h-6" />
-                    <span className="font-bold text-xl">BNB</span>
+                    <span className="font-bold text-xl">
+                      {item.outputToken}
+                    </span>
                   </div>{' '}
                   <ButtonFourth onClick={excTrade} loading={loading}>
                     Cancel button
                   </ButtonFourth>
                 </div>
-                <p>Input amount:</p>
-                <p>Min return:</p>
+                <p>Input amount: {item.inputAmount}</p>
+                <p>Min return: {item.minReturn}</p>
               </div>
             ))}
             {data?.length === 0 && (

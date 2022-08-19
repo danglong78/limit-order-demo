@@ -10,7 +10,7 @@ import ModalLayout from 'layouts/Modal.layout';
 import Input from 'components/Input/Input.component';
 import Loading from 'components/Loading.component';
 
-const ModalSelectToken = ({ setTokenName }) => {
+const ModalSelectToken = ({ setTokenName, setTokenInput }) => {
   const { library, account } = useWeb3React();
   const [inputAddress, setInputAddress] = useState('');
   const [inputToken, setInputToken] = useState('');
@@ -64,6 +64,7 @@ const ModalSelectToken = ({ setTokenName }) => {
             onClick={() => {
               if (inputToken) {
                 setTokenName(inputToken);
+                setTokenInput(inputAddress);
                 toggleModal({ isVisible: false });
               }
             }}
@@ -78,9 +79,11 @@ const ModalSelectToken = ({ setTokenName }) => {
 
 ModalSelectToken.propTypes = {
   setTokenName: PropTypes.func,
+  setTokenInput: PropTypes.func,
 };
 ModalSelectToken.defaultProps = {
   setTokenName: () => {},
+  setTokenInput: () => {},
 };
 
 export default ModalSelectToken;

@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { LOADING_KEY } from 'constants/loadingKey.constant';
 
 import LoadingWrapper from 'components/LoadingWrapper.component';
+import Notification from 'components/Notification.component';
 import GlobalModals from 'components/GlobalModals/GlobalModals.component';
 import useEagerConnect from 'hooks/useEagerConnect';
 import DefaultLayout from 'layouts/Default.layout';
@@ -31,6 +32,7 @@ const App = ({ children }) => {
         </div>
       </LoadingWrapper>
       <GlobalModals />
+      <Notification />
     </>
   );
 };

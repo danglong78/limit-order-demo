@@ -23,8 +23,6 @@ import Select from 'components/Input/Select.component';
 import CurrencyInputPanel from 'components/SwapSection/CurrencyInputPanel.component';
 import { ButtonPrimary, ButtonThird } from './Button';
 
-const spender = '0xdAC17F958D2ee523a2206206994597C13D831ec7';
-
 const LimitOrderSection = ({ handler, setHandler }) => {
   const { library, account } = useWeb3React();
   const { toggleModal } = useModal(MODAL_KEY.SELECT_TOKEN);
@@ -33,14 +31,28 @@ const LimitOrderSection = ({ handler, setHandler }) => {
   const [output, setOutput] = useState('');
   const [inputToken, setInputToken] = useState('');
   const [outputToken, setOutputToken] = useState('');
+  const [inputTokenName, setInputTokenName] = useState('');
+  const [outputTokenName, setOutputTokenName] = useState('');
 
   const { excAsyncFunc: excTrade, loading } = useAsyncWithLoading({
     asyncFunc: async () => {
       const signer = getSigner(library, account);
+      console.log(
+        '🚀 ~ file: LimitOrderSection.component.js ~ line 40 ~ asyncFunc: ~ signer',
+        signer
+      );
       const inputContract = getContract(inputToken, ERC20, signer);
+      console.log(
+        '🚀 ~ file: LimitOrderSection.component.js ~ line 42 ~ asyncFunc: ~ inputContract',
+        inputContract
+      );
       const outputContract = getContract(outputToken, ERC20, signer);
-      const inputDecimal = await inputContract.inputContract();
-      const outputDecimal = await outputContract.inputContract();
+      console.log(
+        '🚀 ~ file: LimitOrderSection.component.js ~ line 44 ~ asyncFunc: ~ outputContract',
+        outputContract
+      );
+      const inputDecimal = await inputContract.decimals();
+      const outputDecimal = await outputContract.decimals();
       const [tx, placeError] = await withCatch(
         placeLimitOrder(
           inputToken,
@@ -51,11 +63,23 @@ const LimitOrderSection = ({ handler, setHandler }) => {
           handler
         )
       );
+      console.log(
+        '🚀 ~ file: LimitOrderSection.component.js ~ line 56 ~ asyncFunc: ~ placeError',
+        placeError
+      );
+      console.log(
+        '🚀 ~ file: LimitOrderSection.component.js ~ line 56 ~ asyncFunc: ~ tx',
+        tx
+      );
       if (placeError) {
         toast.error(placeError.message);
         return;
       }
       const [, txError] = await withCatch(tx.wait());
+      console.log(
+        '🚀 ~ file: LimitOrderSection.component.js ~ line 63 ~ asyncFunc: ~ txError',
+        txError
+      );
       if (txError) {
         toast.error(txError.message);
       }
@@ -70,7 +94,7 @@ const LimitOrderSection = ({ handler, setHandler }) => {
     setOutput(e);
   };
   const isInfficientBalance =
-    !amount || !output || !inputToken || outputToken || !handler;
+    !amount || !output || !inputToken || !outputToken || !handler;
 
   return (
     <div className="detail-page-sidebar detail__section">
@@ -97,14 +121,15 @@ const LimitOrderSection = ({ handler, setHandler }) => {
             toggleModal({
               isVisible: true,
               props: {
-                setTokenName: setInputToken,
+                setTokenName: setInputTokenName,
+                setTokenInput: setInputToken,
               },
             });
           }}
         >
           Select token
         </span>
-        <span className="text-lg font-bold">{inputToken}</span>
+        <span className="text-lg font-bold">{inputTokenName}</span>
       </span>
       {/* </form> */}
       <CurrencyInputPanel
@@ -123,14 +148,15 @@ const LimitOrderSection = ({ handler, setHandler }) => {
             toggleModal({
               isVisible: true,
               props: {
-                setTokenName: setOutputToken,
+                setTokenName: setOutputTokenName,
+                setTokenInput: setOutputToken,
               },
             });
           }}
         >
           Select token
         </span>
-        <span className="text-lg font-bold">{outputToken}</span>
+        <span className="text-lg font-bold">{outputTokenName}</span>
       </span>
       <CurrencyInputPanel
         value={output}
