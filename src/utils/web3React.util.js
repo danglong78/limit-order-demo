@@ -24,7 +24,7 @@ const walletConnect = new WalletConnectConnector({
 
 const walletLink = new WalletLinkConnector({
   url: rpcUrl,
-  appName: 'Realnextate',
+  appName: 'Limit Demo Order',
   appLogoUrl: `${process.env.NEXT_PUBLIC_FRONTEND_URL}/icon-512x512.png`,
   supportedChainIds: [chainId],
 });
