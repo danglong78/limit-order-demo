@@ -3,10 +3,11 @@ import useSWR from 'swr';
 import { useWeb3React } from '@web3-react/core';
 import { ArrowSmRightIcon } from '@heroicons/react/outline';
 import { toast } from 'react-hot-toast';
-import { getSigner } from 'utils/contract.util';
+import { getSigner, getContract } from 'utils/contract.util';
 import { getListOrders, cancelOrder } from 'utils/limitOrder.util';
 import withCatch from 'utils/withCatch.util';
 import Newspaper from 'images/newspaper.svg';
+import ERC20 from 'abis/ERC20.json';
 import useAsyncWithLoading from 'hooks/useAsyncWithLoading';
 
 import Loading from 'components/Loading.component';
@@ -28,7 +29,15 @@ const ListOrderTab = ({ handler }) => {
       if (!params) return [];
       const [orders, error] = await withCatch(getListOrders(params));
       if (orders) {
-        return orders;
+        const listPromise = orders.map(async (order) => {
+          const inputContract = getContract(order.inputToken, ERC20, library);
+          const inputName = await inputContract.symbol();
+          const outputContract = getContract(order.outputToken, ERC20, library);
+          const outputName = await outputContract.symbol();
+          return { ...order, inputName, outputName };
+        });
+        const result = await Promise.all(listPromise);
+        return result;
       }
       if (error) {
         return [];
@@ -73,18 +82,20 @@ const ListOrderTab = ({ handler }) => {
               >
                 <div className="flex justify-between items-center ">
                   <div className="flex items-center gap-1">
-                    <span className="font-bold text-xl">{item.inputToken}</span>
+                    <span className="font-bold text-xl">{item.inputName}</span>
                     <ArrowSmRightIcon className="w-6 h-6" />
-                    <span className="font-bold text-xl">
-                      {item.outputToken}
-                    </span>
+                    <span className="font-bold text-xl">{item.outputName}</span>
                   </div>{' '}
-                  <ButtonFourth onClick={excTrade} loading={loading}>
+                  <ButtonFourth
+                    onClick={() => excTrade(item.id)}
+                    loading={loading}
+                  >
                     Cancel button
                   </ButtonFourth>
                 </div>
                 <p>Input amount: {item.inputAmount}</p>
                 <p>Min return: {item.minReturn}</p>
+                <p>Status: {item.status}</p>
               </div>
             ))}
             {data?.length === 0 && (

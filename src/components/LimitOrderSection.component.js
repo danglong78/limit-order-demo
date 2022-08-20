@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { toast } from 'react-hot-toast';
 import { BigNumber } from '@ethersproject/bignumber';
+import { ethers } from 'ethers';
 
 import classNames from 'classnames';
 import { useWeb3React } from '@web3-react/core';
@@ -57,8 +58,8 @@ const LimitOrderSection = ({ handler, setHandler }) => {
         placeLimitOrder(
           inputToken,
           outputToken,
-          BigNumber.from(amount).mul(BIG_TEN).pow(inputDecimal),
-          BigNumber.from(output).mul(BIG_TEN).pow(outputDecimal),
+          ethers.utils.parseUnits(amount, inputDecimal),
+          ethers.utils.parseUnits(output, outputDecimal),
           signer,
           handler
         )
