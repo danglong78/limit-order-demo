@@ -18,6 +18,11 @@ const ModalSelectToken = ({ setTokenName, setTokenInput }) => {
   const { excAsyncFunc: excTrade, loading } = useAsyncWithLoading({
     asyncFunc: async (value) => {
       try {
+        if(value === '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE')
+        {
+          setInputToken('BNB');
+          return;
+        }
         const contract = getTokenContract(
           value,
           getProviderOrSigner(library, account)
