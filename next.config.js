@@ -1,12 +1,7 @@
-const { i18n } = require('./next-i18next.config');
-
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: [
-      'images.pexels.com',
-      'storage-realnextate.sgp1.digitaloceanspaces.com',
-    ],
+    domains: ['images.pexels.com'],
     formats: ['image/avif', 'image/webp'],
   },
   eslint: {
@@ -18,5 +13,4 @@ module.exports = {
     outputStandalone: true,
     scrollRestoration: true,
   },
-  i18n,
 };
