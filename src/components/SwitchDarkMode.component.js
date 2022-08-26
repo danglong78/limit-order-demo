@@ -5,12 +5,10 @@ import useTheme from 'hooks/useTheme';
 import { MoonIcon } from '@heroicons/react/solid';
 import { SunIcon } from '@heroicons/react/outline';
 
-import { useTranslation } from 'next-i18next';
 import ButtonIconRaw from './Button/ButtonIconRaw.component';
 
 const SwitchDarkMode = ({ className }) => {
   const { toTheme, isDark } = useTheme();
-  const { t } = useTranslation('common');
 
   const toggleDarkMode = () => {
     if (localStorage.theme === 'light') {
@@ -25,8 +23,8 @@ const SwitchDarkMode = ({ className }) => {
       className={className}
       icon={isDark ? MoonIcon : SunIcon}
       onClick={toggleDarkMode}
-      tooltip={t('switchTheme')}
-      label={t('switchTheme')}
+      tooltip='Change theme'
+      label='Change theme'
     />
   );
 };

@@ -7,7 +7,6 @@ import Dayjs from 'dayjs';
 import { DayPickerSingleDateController } from 'react-dates';
 import classNames from 'classnames';
 import { ButtonThird } from 'components/Button';
-import { useTranslation } from 'next-i18next';
 
 const TIME = [
   '00 : 00',
@@ -49,7 +48,6 @@ const DateInput = ({
   const [isAM, setIsAM] = useState(true);
   const [selectedTime, setSelectedTime] = useState('00 : 00');
   const [selectedDate, setSelectedDate] = useState(dates[0]);
-  const { t } = useTranslation();
 
   useEffect(() => {}, [isAM, selectedTime]);
 
@@ -114,7 +112,7 @@ const DateInput = ({
       />
       {dateTimePicker && (
         <div className="date-input__time-picker">
-          <p className="text-center text-lg font-semibold">{t('selectTime')}</p>
+          <p className="text-center text-lg font-semibold">Select Time</p>
           <div className="date-inpunt__time-list">{TIME.map(renderTime)}</div>
           <div className="flex gap-[3px]">
             <ButtonThird

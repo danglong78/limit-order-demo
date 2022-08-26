@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import { ButtonSecondary } from 'components/Button';
 import classNames from 'classnames';
-import { useTranslation } from 'next-i18next';
 import { Input as NumericalInput } from '../Input/TokenAmountInput.component';
 
 const CurrencyInputPanel = ({
@@ -16,7 +15,6 @@ const CurrencyInputPanel = ({
   disabled,
 }) => {
   const [focus, setFocus] = useState(false);
-  const { t } = useTranslation('detail');
 
   return (
     <div id={id}>
@@ -46,7 +44,7 @@ const CurrencyInputPanel = ({
               className="!px-3 !py-[4px] !uppercase"
               label="Max"
             >
-              {t('max')}
+              Max
             </ButtonSecondary>
           )}
         </div>

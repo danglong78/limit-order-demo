@@ -3,30 +3,19 @@ import Error from 'images/404.svg';
 
 import SinglePageButton from 'components/SinglePageButton.component';
 
-import { useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-
 const PageNotFound = () => {
-  const { t } = useTranslation(['404', 'common']);
 
   return (
     <SinglePageButton
-      title={t('pageNotFound')}
+      title={"Page not found"}
       imgSrc={Error}
-      description={t('oops')}
+      description={''}
       btnHref="/"
       btnClass="w-32"
-      btnTitle={t('common:goBack')}
+      btnTitle={"Go back"}
     />
   );
 };
 
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common', '404'])),
-    },
-  };
-}
 
 export default PageNotFound;

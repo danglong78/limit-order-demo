@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Image from 'components/Image.component';
 
 import { useRouter } from 'next/router';
-import { useTranslation } from 'next-i18next';
 import useDetectScreen from 'hooks/useDetectScreen';
 
 const LOCALE_FLAG = {
@@ -20,7 +19,6 @@ const LOCALE_FLAG = {
 const SwitchLocale = ({ className }) => {
   const router = useRouter();
   const { mobileScreen } = useDetectScreen();
-  const { t } = useTranslation('common');
 
   const { locale: activeLocale } = router;
   const { pathname, query, asPath } = router;
@@ -36,9 +34,9 @@ const SwitchLocale = ({ className }) => {
           locale: localeToSwitch,
         })
       }
-      aria-label={t('switchLanguage')}
+      aria-label={'switchLanguage'}
     >
-      <span className="sr-only">{t('switchLanguage')}</span>
+      <span className="sr-only">{'switchLanguage'}</span>
       <Image src={src} alt={alt} layout="fixed" width={30} height={21} />
     </button>
   );
@@ -46,7 +44,7 @@ const SwitchLocale = ({ className }) => {
   if (mobileScreen) return renderButton();
 
   return (
-    <div className="tooltip tooltip-bottom" data-tip={t('switchLanguage')}>
+    <div className="tooltip tooltip-bottom" data-tip='Switch Language'>
       {renderButton()}
     </div>
   );

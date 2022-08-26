@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import { useTranslation } from 'next-i18next';
 
 const MenuItem = ({ href, name, iconItem, onClick }) => {
-  const { t } = useTranslation('common');
 
   if (href)
     return (
@@ -17,7 +15,7 @@ const MenuItem = ({ href, name, iconItem, onClick }) => {
             })}
           </div>
           <div className="ml-4">
-            <p className="user-menu-item__text">{t(name)}</p>
+            <p className="user-menu-item__text">{name}</p>
           </div>
         </a>
       </Link>
@@ -32,7 +30,7 @@ const MenuItem = ({ href, name, iconItem, onClick }) => {
         })}
       </div>
       <div className="ml-4">
-        <p className="user-menu-item__text">{t(name)}</p>
+        <p className="user-menu-item__text">{name}</p>
       </div>
     </div>
   );

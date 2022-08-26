@@ -7,7 +7,6 @@ import useDetectScreen from 'hooks/useDetectScreen';
 import ModalLayout from 'layouts/Modal.layout';
 
 import Warning from 'images/warning.svg';
-import { useTranslation } from 'next-i18next';
 import { ButtonPrimary, ButtonThird } from './Button';
 
 const ModalConfirm = ({
@@ -20,7 +19,6 @@ const ModalConfirm = ({
 }) => {
   const { toggleModal, closeAllModals } = useModal(MODAL_KEY.CONFIRM);
   const { mobileScreen } = useDetectScreen();
-  const { t } = useTranslation();
 
   const closeModal = () => {
     toggleModal({ isVisible: false });
@@ -39,10 +37,10 @@ const ModalConfirm = ({
             <Image src={imgSrc || Warning} />
           </div>
           <span className="font-bold text-lg md:text-2xl mt-6 text-center">
-            {title || t('undoneAction')}
+            {title }
           </span>
           <span className="font-semibold text-neutral-400 text-sm md:text-base mt-3 text-center">
-            {subTitle || t('areYouSure')}
+            {subTitle}
           </span>
         </div>
       </ModalLayout.Slot>
@@ -51,18 +49,18 @@ const ModalConfirm = ({
           {!mobileScreen && !hideCancelBtn && (
             <ButtonThird
               onClick={closeModal}
-              label={t('cancel')}
+              label={'Cancel'}
               className="flex-grow"
             >
-              {t('cancel')}
+              Cancel
             </ButtonThird>
           )}
           <ButtonPrimary
             onClick={handleConfirm}
-            label={t('confirm')}
+            label='confirm'
             className="flex-grow"
           >
-            {t('confirm')}
+            Confirm
           </ButtonPrimary>
         </div>
       </ModalLayout.Slot>
